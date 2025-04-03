@@ -1,0 +1,96 @@
+$colorTextBase: #171717;
+$colorMain: #495E57;
+$colorYellow: #F4CE14;
+$colorLinks: #000;
+$colorBackground: #EDEFEE;
+$lineHeightText: 1.2;
+
+@import "fonts";
+@import "header";
+@import "hero";
+@import "bookingForm";
+
+
+html{
+  scroll-behavior: smooth;
+  position: relative;
+  box-sizing: border-box;
+  background-color: $colorBackground;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body{
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 14px;
+  color: $colorTextBase;
+  line-height: $lineHeightText;
+}
+
+img, svg{
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{ 
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3, p{
+  margin: 0;
+}
+
+fieldset{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+nav ul li a:hover{
+  text-decoration: underline solid $colorMain;
+  
+}
+
+
+.container{
+  --width: 1180px;
+  --padding: 30px;
+  max-width: calc(var(--width) + var(--padding)*2);
+  margin: 0 auto;
+  padding: 0 var(--padding);
+}
+
+
+@media (max-width: 1140px) {
+  .container {
+      --container-width: 880px;
+  }
+}
+@media (max-width: 940px) {
+  .container {
+      --container-width: 680px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+      --container-padding: 15px;
+  }
+}

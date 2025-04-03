@@ -1,9 +1,11 @@
 import React from 'react';
 import recipes from '../recipes';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
+
 
 const Menu = () => {
-  const handleOrder = (id) => {
+  const handleOrder = () => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -11,12 +13,12 @@ const Menu = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonText: "Yes, order it!"
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
+          title: "Ordered!",
+          text: "Your order has been processed.",
           icon: "success"
         });
       }
@@ -28,7 +30,7 @@ const Menu = () => {
       <div className='menu-container'>
         <div className='menu-header'>
           <h2>This week specials!</h2>
-          <button>Order Menu</button>
+          {/* <Link to="/menu"><button className = "hero__btn" aria-label='On Click'>Order Menu</button></Link> */}
         </div>
 
         <div className='cards'>
@@ -42,7 +44,7 @@ const Menu = () => {
                 </div>
 
                 <p>{recipe.description}</p>
-                <button className='orderBtn' onClick={()=>handleOrder(recipe.id)}>Order now</button>
+                <button className='orderbtn' onClick={()=>handleOrder(recipe.id)}>Order now</button>
               </div>
             </div>
               )

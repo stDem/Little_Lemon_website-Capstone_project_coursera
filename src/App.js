@@ -5,6 +5,7 @@ import BookingForm from './components/BookingForm';
 import Main from './components/Main';
 import { BrowserRouter } from 'react-router-dom';
 import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <BrowserRouter>
         <Main />
       </BrowserRouter>
-      <Menu/>
+      <Menu />
+      <Footer/>
     </>
   );
 }

@@ -11,7 +11,7 @@ const Nav = () => {
     <header className="header" id="top">
       <div className="container">
         <nav className={`header__nav ${menuOpen ? "open": ""}`}>
-            <a href="#" className="header_logo">
+            <a href="/" className="header_logo">
                 <img src={logo} alt="logo" />
           </a>
 
@@ -24,11 +24,11 @@ const Nav = () => {
 
             <menu className={`nav-links ${menuOpen ? "visible": ""}`}>
                 <ul className='header__menu'>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/menu">Menu</a></li>
                     <li><a href="/booking">Book a table</a></li>
-                    <li><a href="#">LogIn</a></li>
+                    <li><a href="/">LogIn</a></li>
       
                 </ul>
             </menu>

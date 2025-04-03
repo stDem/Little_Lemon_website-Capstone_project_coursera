@@ -6,7 +6,7 @@
   position: relative;
 
     &__h2{
-      color: #F4CE14;
+      color: $colorYellow;
       font-size: 40px;
     }
 
@@ -17,7 +17,7 @@
     }
 
     &__btn {
-      background-color: #F4CE14;
+      background-color: $colorYellow;
       color: black;
       padding: 14px 18px;
       border: none;
@@ -27,7 +27,15 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    &__btn:hover{
+      background-color: $colorMain;
+      color: $colorBackground;
+      transition: 0.5s;
+    }
 }
+
+
 
 .banner p {
   font-size: 1.25em;

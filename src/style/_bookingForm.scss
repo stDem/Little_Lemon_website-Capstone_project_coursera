@@ -1,6 +1,7 @@
 
 form, .comfirm{
   padding: 0.9em 13%;
+  border: 0.08em solid $colorMain;
 }
 
 .formField{
@@ -13,11 +14,11 @@ input, label{
   margin-bottom: 1.5em;
 }
 #book-date, #book-time, #book-guests, #book-occasion{
-  background: $colorMain;
+  background: #bdbdbd43;
   padding: 0.8em 2em;
   border: none;
   outline: none;
-  border-radius: 0.1em;
+  border-radius: 0.5em;
 }
 
 .btnReceive input{
@@ -27,5 +28,10 @@ input, label{
   color: $colorBackground;
   border: none;
   border-radius: 0.2em;
-
+  cursor: pointer;
+}
+.btnReceive input:hover{
+  background: $colorYellow;
+  color: $colorMain;
+  transition: 0.5s;
 }
